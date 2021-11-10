@@ -9,7 +9,7 @@
         "discountInPercent": 25,
         "phone": "+996 700 312 312",  
         "author": "Steve Jobs",
-        "category": "128",
+        "memory": "128",
         "image": ["https://svetofor.info/images/detailed/156/smartfon-apple-iphone-xs-max-64-gb-ram-4-gb-dual-sim-space-gray-1.jpg","https://svetofor.info/images/detailed/156/smartfon-apple-iphone-xs-max-64-gb-ram-4-gb-dual-sim-space-gray-1.jpg","https://svetofor.info/images/detailed/156/smartfon-apple-iphone-xs-max-64-gb-ram-4-gb-dual-sim-space-gray-1.jpg"],
         "countInStock": 20
     },
@@ -20,7 +20,7 @@
       "price": 2500,
       "phone": "+996 700 312 312",
       "author": "Steve Jobs",
-      "category": "64",
+      "memory": "64",
       "image": ["https://svetofor.info/images/detailed/156/smartfon-apple-iphone-xs-max-64-gb-ram-4-gb-dual-sim-space-gray-1.jpg","https://svetofor.info/images/detailed/156/smartfon-apple-iphone-xs-max-64-gb-ram-4-gb-dual-sim-space-gray-1.jpg","https://svetofor.info/images/detailed/156/smartfon-apple-iphone-xs-max-64-gb-ram-4-gb-dual-sim-space-gray-1.jpg"],
       "countInStock": 20
     },
@@ -31,7 +31,7 @@
       "price": 2700,
       "phone": "+996 700 312 312",
       "author": "Steve Jobs",
-      "category": "256",
+      "memory": "256",
       "image": ["https://svetofor.info/images/detailed/156/smartfon-apple-iphone-xs-max-64-gb-ram-4-gb-dual-sim-space-gray-1.jpg","https://svetofor.info/images/detailed/156/smartfon-apple-iphone-xs-max-64-gb-ram-4-gb-dual-sim-space-gray-1.jpg","https://svetofor.info/images/detailed/156/smartfon-apple-iphone-xs-max-64-gb-ram-4-gb-dual-sim-space-gray-1.jpg"],
       "countInStock": 20
     },
@@ -42,7 +42,7 @@
       "price": 3400,
       "phone": "+996700 312 312",
       "author": "Steve Jobs",
-      "category": "512",
+      "memory": "512",
       "image": ["https://svetofor.info/images/detailed/156/smartfon-apple-iphone-xs-max-64-gb-ram-4-gb-dual-sim-space-gray-1.jpg","https://svetofor.info/images/detailed/156/smartfon-apple-iphone-xs-max-64-gb-ram-4-gb-dual-sim-space-gray-1.jpg","https://svetofor.info/images/detailed/156/smartfon-apple-iphone-xs-max-64-gb-ram-4-gb-dual-sim-space-gray-1.jpg"],
       "countInStock": 20
     },
@@ -53,7 +53,7 @@
       "price": 4300,
       "phone": "+996 700 312 312",
       "author": "Steve Jobs",
-      "category": "1024",
+      "memory": "1024",
       "image": ["https://svetofor.info/images/detailed/156/smartfon-apple-iphone-xs-max-64-gb-ram-4-gb-dual-sim-space-gray-1.jpg","https://svetofor.info/images/detailed/156/smartfon-apple-iphone-xs-max-64-gb-ram-4-gb-dual-sim-space-gray-1.jpg","https://svetofor.info/images/detailed/156/smartfon-apple-iphone-xs-max-64-gb-ram-4-gb-dual-sim-space-gray-1.jpg"],
       "countInStock": 20
     },
@@ -64,7 +64,7 @@
       "price": 5300,
       "phone": "+996 700 312 312",
       "author": "Steve Jobs",
-      "category": "128",
+      "memory": "128",
       "image": ["https://svetofor.info/images/detailed/156/smartfon-apple-iphone-xs-max-64-gb-ram-4-gb-dual-sim-space-gray-1.jpg","https://svetofor.info/images/detailed/156/smartfon-apple-iphone-xs-max-64-gb-ram-4-gb-dual-sim-space-gray-1.jpg","https://svetofor.info/images/detailed/156/smartfon-apple-iphone-xs-max-64-gb-ram-4-gb-dual-sim-space-gray-1.jpg"],
       "countInStock": 20
     }

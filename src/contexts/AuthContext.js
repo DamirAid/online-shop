@@ -40,6 +40,7 @@ const AuthContextProvider = ({ children }) => {
           case "auth/wrong-password":
             setPasswordError(err.message);
             break;
+          default: return err.code
         }
       });
   };

@@ -22,6 +22,7 @@ const ProductsContextProvider = ({ children }) => {
 
   const getProducts = async (params="") => {
     const { data } = await axios(`http://localhost:8000/products?${params}`)
+		console.log(data)
     dispatch({
       type: "GET_PRODUCTS",
       payload: data

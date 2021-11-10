@@ -16,7 +16,7 @@ import Button from '@mui/material/Button';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 const ProductCard = ({ item }) => {
   return (
-    <Grid item xs={3}>
+    <Grid item xs={4}>
     <Card>
       <CardHeader
         avatar={

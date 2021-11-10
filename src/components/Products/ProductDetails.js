@@ -31,7 +31,7 @@ const ProductDetails = () => {
 
 
   return (
-    <section className="product__block-details">
+
       <Container>
         <Grid container spacing={2}>
           <Grid item xs={6}>
@@ -116,7 +116,7 @@ const ProductDetails = () => {
           </Grid>
         </Grid>
       </Container>
-    </section >
+
   );
 };
 

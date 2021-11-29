@@ -16,15 +16,15 @@ import Paper from '@mui/material/Paper';
 import './Product.css'
 import 'swiper/swiper-bundle.min.css'
 import 'swiper/swiper.min.css'
-
 import SwiperCore, { Thumbs } from 'swiper';
-
+import {checkProductInCart } from '../../helpers/cartFunctions';
 SwiperCore.use([Thumbs]);
 
 const ProductDetails = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   let params = useParams().id;
-  const { getCurProduct, currentProduct } = useContext(productsContext)
+  const { getCurProduct, currentProduct, addProductToCart } = useContext(productsContext)
+	
   useEffect(() => {
     getCurProduct(params)
   }, [])
@@ -102,12 +102,13 @@ const ProductDetails = () => {
             </Box>
             <Button
               variant="contained"
-              color="success"
-
+       
+							onClick={() => addProductToCart(currentProduct)} 
+							color={checkProductInCart(currentProduct.id) ? 'success' : 'primary'}
               startIcon={<AddShoppingCartIcon />}
               fullWidth={true}
               sx={{ mt: '20px', height: '50px' }}>
-              Добавить в корзину
+              {checkProductInCart(currentProduct.id) ? 'Удалить из корзины' : 'Добавить в корзину'}
             </Button>
             <Alert
               severity="info"

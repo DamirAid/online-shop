@@ -1,13 +1,24 @@
 import { FormControl, FormControlLabel, FormLabel, Grid, Paper, Radio, RadioGroup } from "@mui/material";
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { productsContext } from "../../contexts/ProductContext";
 import history from '../../helpers/history';
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 const Sidebar = () => {
-	const { getProducts } = useContext(productsContext);
+	let { getProducts, getAllProducts } = useContext(productsContext);
 	const [memory, setMemory] = useState(getMemory());
 	const [priceValue, setPriceValue] = useState(getPrice());
+
+	useEffect(() => {
+		getProducts(new URLSearchParams(history.location.search).toString())
+		const params = new URLSearchParams(history.location.search)
+		params.delete('_page')
+		getAllProducts(params.toString())
+		console.log(params.toString())
+	}, [])
+
+
+
 	function getMemory() {
 		const search = new URLSearchParams(history.location.search);
 		return search.get('memory')
@@ -20,13 +31,24 @@ const Sidebar = () => {
 		if (e.target.value === "all") {
 			history.push(`${history.location.pathname.replace('memory')}`)
 			getProducts()
+			getAllProducts()
+
 			setMemory(e.target.value)
 			return
 		}
+
 		const search = new URLSearchParams(history.location.search);
+
 		search.set('memory', e.target.value)
+		search.set('_page', '1')
+
 		history.push(`${history.location.pathname}?${search.toString()}`);
+		
+		const params = new URLSearchParams(history.location.search)
+		params.delete('_page')
 		getProducts(search.toString())
+		getAllProducts(params.toString())
+
 		setMemory(e.target.value)
 	}
 
@@ -34,17 +56,22 @@ const Sidebar = () => {
 		const priceSearch = new URLSearchParams(history.location.search);
 		priceSearch.set('price_gte', e.target.value[0])
 		priceSearch.set('price_lte', e.target.value[1])
+		priceSearch.set('_page', '1')
 		history.push(`${history.location.pathname}?${priceSearch.toString()}`);
+		const params = new URLSearchParams(history.location.search)
+		params.delete('_page')
 		getProducts(priceSearch.toString())
+		getAllProducts(params.toString())
+
 		setPriceValue(e.target.value);
-	};
+	}
 	function valuetext(value) {
 		return `${value}`;
 	}
 	return (
 		<Grid item md={3}>
 			<Paper sx={{ p: '20px' }}>
-				<Box sx={{mb:2}}>
+				<Box sx={{ mb: 2 }}>
 					<FormControl component="fieldset">
 						<FormLabel component="legend">Memory</FormLabel>
 						<RadioGroup value={memory} onChange={handleChangeMemory} aria-label="memory" name="memory1">
@@ -57,7 +84,7 @@ const Sidebar = () => {
 						</RadioGroup>
 					</FormControl>
 				</Box>
-				<Box sx={{mb:2}}>
+				<Box sx={{ mb: 2 }}>
 					<FormLabel component="price">Price</FormLabel>
 					<Slider
 						getAriaLabel={() => 'Temperature range'}

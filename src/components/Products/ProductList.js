@@ -8,11 +8,12 @@ import ProductCard from './ProductCard';
 
 const ProductsList = () => {
 
-  const { getProducts, products } = useContext(productsContext)
+  const { products } = useContext(productsContext)
 
-  useEffect(() => {
-    getProducts()
-  }, [])
+  // useEffect(() => {
+	// 	getAllProducts()
+
+  // }, [])
 
 
   return (

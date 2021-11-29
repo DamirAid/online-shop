@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom'
 import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
@@ -14,7 +14,11 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import Button from '@mui/material/Button';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
+import { productsContext } from '../../contexts/ProductContext';
+import {checkProductInCart } from '../../helpers/cartFunctions';
+
 const ProductCard = ({ item }) => {
+	const { addProductToCart } = useContext(productsContext)
   return (
     <Grid item xs={4}>
     <Card>
@@ -42,7 +46,7 @@ const ProductCard = ({ item }) => {
         <IconButton aria-label="add to favorites">
           <FavoriteIcon />
         </IconButton>
-        <IconButton aria-label="share">
+        <IconButton aria-label="share" onClick={() => addProductToCart(item)} color={checkProductInCart(item.id) ? 'success' : 'primary'} >
           <AddShoppingCartIcon />
         </IconButton>
         <Button variant="outlined" endIcon={<MoreHorizIcon />}>

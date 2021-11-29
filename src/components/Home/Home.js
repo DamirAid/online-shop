@@ -3,7 +3,6 @@ import React from 'react';
 import Content from './Content';
 import './Home.css'
 import Sidebar from './Sidebar';
-
 const Home = () => {
 	return (
 		<section className="product__block-details">

@@ -3,6 +3,7 @@ import ProductsList from '../Products/ProductList'
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import { Grid, Paper } from '@mui/material';
+import PaginationList from './PaginationList'
 const Content = () => {
   return (
     <Grid item md={9}>
@@ -13,6 +14,7 @@ const Content = () => {
               Товары
             </Typography>
             <ProductsList />
+						<PaginationList/>
           </Container>
         </section>
       </Paper>
